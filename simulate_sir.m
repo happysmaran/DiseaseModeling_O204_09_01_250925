@@ -1,5 +1,24 @@
 function [S, Q, I, R, W] = simulate_sir(s_0, q_0, i_0, r_0, m, o, beta, gamma, num_steps)
 
+% beta is infectivity
+% gamma is recovery
+
+% num_steps is total simulation runtime
+
+% s_0 is initial susceptible
+% q_0 is initial quarantined
+% i_0 is initial infected
+% r_0 is initial recovered
+
+% m is mask effectiveness
+% o is obedience rate
+
+% S is susceptible list
+% Q is quarantined list
+% I is infected list
+% R is recovered list
+% W is time counter for graphing
+
 % Setup
 S = zeros(1, num_steps); S(1) = s_0;
 Q = zeros(1, num_steps); Q(1) = q_0;
